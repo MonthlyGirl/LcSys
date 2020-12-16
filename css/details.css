@@ -1,0 +1,237 @@
+a {
+  color: #8b838e;
+}
+#magnGlass {
+  width: 1502px;
+  margin: 0 auto;
+  /* background-color: indianred; */
+}
+.showBox {
+  width: 525px;
+  height: 800px;
+  float: left;
+  /* background-color: palegoldenrod; */
+}
+.productImg {
+  width: 525px;
+  height: 525px;
+  /* background-color: orange; */
+  position: relative;
+}
+.smallImg {
+  width: 525px;
+  height: 525px;
+  display: block;
+}
+.bigImg {
+  width: 700px;
+  height: 700px;
+  /* background-color: saddlebrown; */
+  position: absolute;
+  right: -705px;
+  top: 0;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  overflow: hidden;
+  display: none;
+}
+.bigImg img {
+  width: 1225px;
+  height: 1225px;
+  position: absolute;
+}
+/* 
+  大图的大小
+     遮罩层 300 / bigImg  700  == 小图525 / 大图  ==>1250px
+*/
+.filter {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: move;
+  display: none;
+}
+
+.productList {
+  height: 130px;
+  /* background-color: blue; */
+  margin-top: 45px;
+}
+.productList span {
+  float: left;
+  display: block;
+  width: 33px;
+  height: 130px;
+  line-height: 130px;
+  background-color: #fff;
+  color: #35343a;
+  font-size: 44px;
+  text-align: center;
+  font-weight: 900;
+  cursor: pointer;
+}
+.imgListShow {
+  width: 459px;
+  height: 130px;
+  /* background-color: pink; */
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.listBox {
+  height: 130px;
+  position: absolute;
+}
+.listBox article {
+  width: 112px;
+  height: 112px;
+  box-sizing: border-box;
+  /* margin:0 2px; */
+  margin-right: 3px;
+  float: left;
+  cursor: pointer;
+  padding-top: 2px;
+  margin-top: 12px;
+  /* border: 1px solid #000; */
+}
+.listBox article img {
+  width: 100%;
+  height: 100%;
+}
+#detailsBox {
+  float: left;
+}
+.goodInfo {
+  margin-left: 100px;
+  width: 700px;
+  height: auto;
+  float: right;
+  margin-top: 28px;
+  /* background-color: navajowhite; */
+}
+.goodsFavCount {
+  background: url(https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/24/24747.png)
+    0px center no-repeat;
+  background-size: 26px 22px;
+  color: black;
+  padding-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 21px;
+  line-height: 21px;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+.infoItem {
+  width: 500px;
+}
+.itemCon {
+  width: auto;
+  height: 24px;
+  font-size: 0px;
+  display: inline-block;
+}
+.itemCon .item {
+  padding: 2px 20px;
+  width: auto;
+  height: 37px;
+  display: inline-block;
+  line-height: 37px;
+  vertical-align: middle;
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+  background: #dcdcdc;
+  border: 1px solid black;
+}
+.infoItem .mopt {
+  height: 32px;
+  display: inline;
+  font-size: 0px;
+}
+.infoItem .mopt a {
+  color: black;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 11px;
+  vertical-align: middle;
+  background: #fff;
+  text-align: center;
+  border: 0px solid black;
+}
+.infoItem .mopt .inpt {
+  margin: 0px 7px;
+  width: 60px;
+  height: 28px;
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: middle;
+  color: #666;
+  font-size: 13px;
+  border: none;
+  background: white;
+  text-align: center;
+  border: 1px solid gray;
+}
+.infoItem .buyAll{
+      width: 495px;
+font-size: 21.8px;
+    color: #999;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+    
+.infoItem .buy2 {
+  display: inline-block;
+     background: black;
+    width: 495px;
+    height: 64px;
+    line-height:64px;
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+}
+.btn138_34{
+     display: inline-block;
+    width: 239px;
+    height: 57px;
+    border: none;
+    color: black;
+    line-height: 52px;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: #fff;
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+.addcar2{
+      background: url(https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/24/24749.png) #fff no-repeat;
+    float: left;
+    background-size: 23px;
+    background-position: 51px 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.shareTo2{
+      background: url(https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/24/24746.png) #fff no-repeat;
+    float: right;
+    background-size: 18px;
+    background-position: 78px 14px;
+}
+#goodDet{
+  width: 1502px;
+  margin: 0 auto;
+}
+#goodDet .goodsDetail img{
+  width: 100%;
+}
+.sh a:hover .cusService{
+  display: block;
+}

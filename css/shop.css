@@ -1,0 +1,108 @@
+#nav1 {
+  height: 76px;
+  margin-top: 49px;
+}
+.nav1Con {
+  height: 76px;
+  width: 1500px;
+  margin: 0 auto;
+  /* background-color: orange; */
+  line-height: 76px;
+}
+.nav1Con a {
+  font-size: 17px;
+  color: #63635b;
+}
+.nav1Con span {
+  font-size: 9px;
+  color: #bdbdbd;
+}
+#main{
+  width: 1502px;
+  /* background-color: pink; */
+  margin: 0 auto;
+  height: 860px;
+}
+#mycarousel li{
+  margin-bottom: 10px;
+}
+#mycarousel li img{
+  width: 1502px;
+  height: 710px;
+}
+.osm-tle{
+ margin: 84px 0px 40px;
+    position: relative;
+    /* background-position: center -532px;
+    height: 47px; */
+}
+.osm-tle a{
+ display: inline-block;
+    width: 297px;
+    height: 65px;
+    /* background-position: 0 -739px; */
+    background: url(../img/1.png) no-repeat;
+    margin-top: 10px;
+}
+.osm-tle span{
+   display: inline-block;
+   margin-left: 302px;
+   width: 263px;
+   height: 71px;
+   background: url(../img/3.png) no-repeat;
+}
+   
+   
+.nav2Con {
+  width: 1500px;
+  margin: 0 auto;
+  /* background-color: red; */
+  height: 138px;
+}
+/* .nav2Con ul {
+  width: 1206px;
+} */
+.nav2Con ul li {
+  float: left;
+  width: 140px;
+  height: 68px;
+  line-height: 68px;
+  border-bottom: 1px solid #ededed;
+}
+.nav2Con ul li a {
+  color: #010005;
+  font-size: 19px;
+}
+#nav2 .priceSx {
+  line-height: 68px;
+  border-bottom: 2px solid #ededed;
+  color: #010005;
+  font-size: 19px;
+}
+#btnList {
+  width: 1500px;
+  margin: 0 auto;
+}
+.btnCon {
+  float: right;
+  margin-right: 20px;
+}
+
+.active1 {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #98b5d5;
+  color: #fff;
+  text-align: center;
+}
+.first {
+  margin-right: 10px;
+}
+.last {
+  margin-left: 10px;
+}
+.btnCon a {
+  margin: 0 10px;
+  cursor: pointer;
+}

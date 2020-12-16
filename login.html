@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      #wrap{
+        width: 300px;
+        height: 580px;
+        margin: 120px auto;
+      }
+       #wrap .imgA{
+         display: block;
+         margin:50px 0;
+         width: 250px;
+         text-align: center;
+       }
+        #wrap i{
+          float: left;
+          margin-top: 7px;
+        }
+        .check{
+          width: 300px;
+          margin: 0 30px;
+        }
+        .autoBtn{
+          float: left;
+          padding: 5px;
+        }
+        .yzId{
+          display: inline-block;
+          margin-left: 88px;
+        }
+        .loginP{
+          width: 300px;
+          text-align: center;
+        }
+        .loginBtn{
+          width: 100%;
+          background-color: #25292E;
+          color: #fff;
+        }
+    </style>
+</head>
+<body>
+  <div id="wrap"> 
+   <a href="index.html" class="imgA"> <img src="./img/nlicon.png" alt=""></a>
+<form class="form-horizontal">
+  <div class="form-group">
+ <i> <img src="./img/nlphone.png" alt=""></i>
+    <div class="col-sm-10">
+      <input type="hidden" class="dataId" value="">
+      <input type="text" class="form-control userPhone" id="inputEmail3" placeholder="输入手机号" value="">
+    </div>
+   
+  </div>
+  <div class="form-group">
+    <i href="#"><img src="./img/nlcode.png" alt=""></i>
+    <div class="col-sm-10">
+       <input type="text" class="form-control userYzm" id="inputPassword3" placeholder="输入验证码"> <br>
+    </div>
+  </div>
+  <div class="form-group">
+      <div class="checkbox check">
+          <input type="checkbox" class="autoBtn">  自动登录
+          <button type="button" class="btn btn-default yzId">获取验证码</button>
+      </div>
+    </div>
+
+  <div class="form-group">
+
+   <p class="loginP"> <button type="button" class="btn btn-primary btn-lg loginBtn">登录</button></p>
+   <span>还未注册?<a href="http://localhost:8080/liangcSys/register.html">请点击</a></span>
+  </div>
+</form>
+  </div>
+
+<script src="./js/jquery-1.11.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
+  <script src="./js/cookie.js"></script>
+  <script src="./js/myApi.js"></script>
+  <script src="./js/promiseAjax.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>

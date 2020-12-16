@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./font/demo.css">
+  <link rel="stylesheet" href="./font/iconfont.css">
+
+
+  <style>
+    #wrap {
+      width: 450px;
+      height: 580px;
+      margin: 100px auto;
+    }
+
+    #wrap .imgA {
+      display: block;
+      margin: 50px 0;
+      width: 450px;
+      text-align: center;
+    }
+
+    #wrap i {
+      float: left;
+      margin-top: 7px;
+    }
+
+    .check {
+      width: 300px;
+      margin: 0 30px;
+    }
+
+    .autoBtn {
+      float: left;
+      padding: 5px;
+    }
+
+    .yzId {
+      display: inline-block;
+      margin-left: 88px;
+    }
+
+    .loginP {
+      width: 300px;
+      text-align: center;
+    }
+
+    .loginBtn {
+      width: 100%;
+      background-color: #25292E;
+      color: #fff;
+    }
+
+    .resignerBtn {
+      margin-left: 40px;
+      width: 80%;
+      height: 50px;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #25292E;
+      font-size: 18px;
+    }
+
+    .agree {
+      margin-left: 40px;
+    }
+
+    .incogSy {
+      margin-left: 110px;
+    }
+
+    .incogSy i a {
+      font-size: 24px;
+      margin: 0 5px;
+      color: #CBCBCB;
+    }
+
+    .incogSy i a:hover {
+      text-decoration: none;
+      color: #B3B3B3;
+    }
+
+    .loginLc {
+      float: right;
+      margin-right: 50px;
+      margin-top: 8px;
+      font-size: 20px;
+    }
+
+    .yzm canvas {
+      display: inline-block;
+      width: 100px;
+      height: 35px;
+      background-color: #fff;
+      border: 1px solid #000;
+      cursor: pointer;
+
+    }
+    .pwdSpan{
+      display: inline-block;
+      margin-top: 10px;
+      color: red;
+    }
+    .yamSpan{
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .active{
+      border:1px solid red
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <a class="imgA"> <img src="./img/nlicon.png" alt=""></a>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">手机号</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control userPhone" id="inputEmail3" placeholder="请输入手机号">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-3 control-label ">验证码</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control userYzm" id="inputPassword3" placeholder="输入验证码 看不清？点击切换">
+ <span class="yamSpan" class="col-sm-2"> </span>
+        </div>
+        <p class="col-sm-3 yzm">
+          <canvas id="canvas"> </canvas>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label ">创建密码</label>
+        <div class="col-sm-8">
+          <input type="password" class="form-control userCPwd" placeholder="6-20为字符组成，区分大小写">
+  <span class="pwdSpan" class="col-sm-2"> </span>
+        </div>
+      
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label ">密码确认</label>
+        <div class="col-sm-8">
+          <input type="password" class="form-control userCheckPwd " placeholder="确认密码">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox agree">
+            <label>
+              <input type="checkbox" class="agreeBtn"> 同意 <a href="#">良仓注册条款</a>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button class="btn btn-default  resignerBtn" disabled>立即注册</button>
+        </div>
+      </div>
+    </form>
+    <p class="incogSy">
+      <i> <a href="#" class="iconfont"> &#xe752;</a></i>
+      <i> <a href="#" class="iconfont">&#xe699;</a></i>
+      <i> <a href="#" class="iconfont">&#xe64d;</a></i>
+      <i> <a href="#" class="iconfont">&#xe606;</a></i>
+      <a href="login.html" class="loginLc">登录良仓</a>
+    </p>
+  </div>
+
+  <script src="../jquery-1.11.0.js"></script>
+  <script src="./js/promiseAjax.js"></script>
+  <script src="./js/myApi.js"></script>
+  <script src="./js/canvas.js"></script>
+  <script src="./js/register.js"></script>
+</body>
+
+</html>

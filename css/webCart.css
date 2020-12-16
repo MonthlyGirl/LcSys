@@ -1,0 +1,189 @@
+#main {
+  width: 1502px;
+  margin: 0 auto;
+  height: auto;
+  /* background-color: pink; */
+}
+#shoppingStepV2 {
+  width: 100%;
+  color: #333;
+  vertical-align: middle;
+  padding: 50px 0px 10px 0px;
+  height: 32px;
+  *height: 32px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 80px;
+}
+#shoppingStepV2 .item {
+  width: 135px;
+  height: 30px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  line-height: 30px;
+  font-size: 20px;
+  color: #759fbb;
+}
+#shoppingcarList {
+  width: 100%;
+  color: #666;
+}
+#shoppingcarList .carTab {
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#shoppingcarList .carTab tr .txtl {
+  text-align: left;
+}
+#shoppingcarList .carTab tr th {
+  border-bottom: 2px solid #ccc;
+  padding: 15px 5px;
+  font-size: 22px;
+  color: #5a656b;
+  font-weight: 500;
+}
+.itemInfo {
+  border-bottom: 1px solid #f0f0f0;
+}
+.itemInfo td {
+  /* background-color: powderblue; */
+  width: auto;
+  height: 60px;
+  padding: 15px 5px;
+  text-align: center;
+  margin: 0 20px;
+}
+.itemInfo td .chkbox {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.itemInfo td .gimgCon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  vertical-align: top;
+}
+.itemInfo td .gimgCon img {
+  width: 68px;
+  height: 68px;
+  border: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+.itemInfo .txtl {
+  text-align: left;
+}
+.itemInfo .txtl p a {
+  color: #898385;
+  font-size: 17px;
+}
+.itemInfo td .num2 {
+  width: 24px;
+  height: 18px;
+  border: none;
+  display: inline-block;
+  text-align: center;
+}
+.itemInfo td .opt {
+  margin: 1px 10px;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  line-height: 26px;
+  cursor: pointer;
+  background: bisque;
+
+}
+#cartmei {
+  margin-top: 96px;
+  width: 688px;
+  height: 302px;
+  background-color: #ffffff;
+  box-shadow: 2px 1px 2px #aaaaaa;
+  overflow: hidden;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+#cartmei img {
+  width: 150px;
+  height: 110px;
+  margin-top: 40px;
+  margin-left: 245px;
+}
+#no_goods_label {
+  margin-top: 15px;
+  background: #ffffff;
+  height: 24px;
+  font-size: 24px;
+  color: #999999;
+  line-height: 24px;
+  text-align: center;
+  width: 300px;
+  margin-left: 170px;
+}
+#shoppingcarOptV2, .shoppingcarOpt {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    padding: 20px 0px;
+    
+}
+#shoppingcarOptV2{
+  margin: 80px 0 150px;
+}
+#shoppingcarOptV2 p {
+    font-size: 21px;
+    line-height: 30px;
+}
+#shoppingcarOptV2 p .priceNo {
+    color: #197bc9;
+    font-size: 20px;
+    display: inline-block;
+    display: inline-block/0;
+    margin-left: 10px;
+}
+#shoppingcarOptV2 p .checkoutBtn {
+    display: inline-block;
+    width: 252px;
+    height: 56px;
+    color: #fff;
+    _margin-bottom: 15px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    background: #7fa6c5;
+    margin-top: 18px;
+    font-size: 20px;
+    border: none;
+}
+
+#shoppingcarOptV2 fieldset {
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    font-size: 20px;
+    color: #404040;
+    width: 200px;
+    padding: 0 54px;
+    display: inline-block;
+    margin-top: 25px;
+}
+#shoppingcarOptV2 fieldset a{
+    color: #404040;
+}
+textarea, input {
+    resize: none;
+    outline: none;
+}

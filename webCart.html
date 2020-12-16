@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>良仓-生活美学平台-购物车</title>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./font/iconfont.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/webCart.css">
+</head>
+
+<body>
+  <!-- 头部导航开始 -->
+  <section id="headBox"></section>
+  <!-- 头部导航结束 -->
+  <!-- 购物车 -->
+  <div id="main">
+    <div id="shoppingStepV2">
+      |<div class="item"><span class="txt chk">购物车</span></div>|
+      <div class="item"><span class="txt">付款</span></div>|
+    </div>
+
+    <div id="shoppingcarList" style="margin-top:20px;">
+      <table class="carTab">
+        <thead>
+          <th class="txtl" width="110"><input id="checkbox_all_cart" type="checkbox" class="chkbox"
+              style="margin-left:12px;" />全选</th>
+          <th width="300">良品</th>
+          <th width="120">数量</th>
+          <th width="160">单价（元）</th>
+          <th width="160">小计（元）</th>
+          <th>操作</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+        
+        <!-- <tr class="itemInfo">
+          <td>
+            <input type="checkbox" class="chkbox"><a href="#" class="gimgCon">
+              <img src="https://imgs-qn.iliangcang.com/ware/upload/icon/2/31/31169.jpg" /></a>
+          </td>
+          <td class="txtl" style="width: 400px;">
+            <p class="t"><a href="">品牌特卖新款正品七匹狼男士皮带 男式自动扣真皮腰带时尚牛皮 男-tmall.com天猫</a></p>
+            <p class="b">尺码：M</p>
+          </td>
+          <td>
+            <span class="opt sub">
+              <img src=" https://www.iliangcang.com/images/default/minus.png" alt="">
+            </span>
+            <input type="text" value="1" class="num2" />
+            <span class="opt">
+              <img src="https://www.iliangcang.com/images/default/add.png" alt="">
+            </span>
+          </td>
+          <td>2650.00</td>
+          <td>2650.00</td>
+          <td><button href="#" class="blue del">删除</button></td>
+        </tr>
+        <tr class="itemInfo">
+          <td>
+            <input type="checkbox" class="chkbox"><a href="#" class="gimgCon"><img
+                src="https://imgs-qn.iliangcang.com/ware/upload/icon/2/31/31169.jpg" /></a>
+          </td>
+          <td class="txtl" style="width: 400px;">
+            <p class="t"><a href="">品牌特卖新款正品七匹狼男士皮带 男式自动扣真皮腰带时尚牛皮 男-tmall.com天猫</a></p>
+            <p class="b">尺码：M</p>
+          </td>
+          <td>
+            <span class="opt"><img src=" https://www.iliangcang.com/images/default/minus.png" alt=""></span>
+            <input type="text" value="1" class="num2" /><span class="opt"><img
+                src="https://www.iliangcang.com/images/default/add.png" alt=""></span>
+          </td>
+          <td>2650.00</td>
+          <td>2650.00</td>
+          <td><a href="#" class="blue">删除</a></td>
+        </tr> -->
+      </table>
+    </div>
+    <div id="cartmei" style="display: none;">
+      <!--good one begin -->
+
+      <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23450.png" />
+      <div id="no_goods_label">
+        您的购物车还是空的
+      </div>
+    </div>
+    <div id="shoppingcarOptV2">
+      <form action="/i/shoppingcar/submit/" method="post" name="cartForm" id="cartForm">
+        <input type="hidden" name="payCartIds" id="payCartIds" />
+        <input type="hidden" name="payMoney" id="payMoney" />
+        <input type="hidden" name="payAmount" id="payAmount" />
+        <p>良品总价 / <span class="priceNo"> ¥0.00 </span>
+        </p>
+        <p><input type="button" class="checkoutBtn" value="立即结算" /></p>
+        <p>
+          <fieldset>
+            <legend><a href="./shop.html">继续购物</a></legend>
+          </fieldset>
+        </p>
+      </form>
+    </div>
+  </div>
+  <!-- 尾部 -->
+  <footer id="footerBox"></footer>
+</body>
+<script src="./js/jquery-1.11.0.js"></script>
+ <script src="../cookie/cookie.js"></script>
+<script src="./js/promiseAjax.js"></script>
+<script src="./js/webCart.js"></script>
+
+</html>
