@@ -1,62 +1,42 @@
 ## 目录
 
-   |-- .gitignore  #git中忽略的文件
-    |-- index.html  #根文件
-    |-- package.json  #项目描述文件
-    |-- README.md  #项目介绍文件
-    |-- build  #webpack开发和打包的配置文件
-    |-- config  #vue-cli的配置文件
-    |-- src #资源文件夹
-    |   |-- App.vue  #页面入口文件
-    |   |-- main.js  #程序入口文件
-    |   |-- api  #请求接口文件
-    |   |   |-- ajax.js  #基于axios封装ajax文件
-    |   |   |-- index.js  #调用接口文件
-    |   |-- common  #公共资源文件
-    |   |   |-- css
-    |   |   |   |-- style.css  #字体图标样式文件
-    |   |   |   |-- fonts  #字体图标文件
-    |   |   |-- util  #公共工具方法文件
-    |   |       |-- util.js
-    |   |-- components  #组件文件
-    |   |   |-- CinemaDetail  #影院详情组件
-    |   |   |-- DatePicker  #日期选择器组件
-    |   |   |-- Login  #登录组件
-    |   |   |-- MovieDetail  #电影详情组件
-    |   |   |   |-- MovieDetail.vue
-    |   |   |   |-- children
-    |   |   |   |   |-- CommentPanel.vue  #影评组件
-    |   |   |-- MovieItem  #单个电影组件
-    |   |   |-- Pay  #支付组件
-    |   |   |-- SelectCinema  #选择影院组件
-    |   |   |-- SelectSeat  #选择座位组件
-    |   |   |-- SubmitOrder  #提交订单组件
-    |   |   |-- TabBar  #底部导航组件
-    |   |-- pages  #页面文件
-    |   |   |-- Cinema  #影院页
-    |   |   |   |-- Cinema.vue
-    |   |   |   |-- children
-    |   |   |       |-- SearchCinema.vue  #搜索影院页
-    |   |   |-- Home  #主页
-    |   |   |   |-- Home.vue
-    |   |   |   |-- children
-    |   |   |   |   |-- SearchAll.vue  #全局搜索页
-    |   |   |-- Movie  #电影页
-    |   |   |   |-- Movie.vue
-    |   |   |   |-- children
-    |   |   |   |   |-- SearchMovie.vue  #搜索电影页
-    |   |   |-- My  #个人页
-    |   |       |-- My.vue
-    |   |       |-- children
-    |   |       |   |-- ModifyUserName.vue  #修改用户名页
-    |   |       |   |-- ModifyUserSign.vue  #修改性别页
-    |   |       |   |-- MyInfo.vue  #个人信息页
-    |   |       |   |-- MyMovie.vue  #收藏电影页
-    |   |       |   |-- MyOrder.vue  #订单页
-    |   |-- router  #路由
-    |   |   |-- index.js  #路由配置
-    |   |-- store  #vuex状态管理
-    |-- static  #静态文件
-        |-- css
-            |-- adapter.css  #屏幕自适应样式
-            |-- reset.css  #兼容性样式
+   |-- css   #样式文件
+   |  |-- index.css   #首页样式
+   |  |-- shop.css    #商店样式
+   |  |-- details.css  #详情页样式
+   |  |-- webCart.css  #购物车样式
+   |  |-- header.css   #头部样式
+   |  |-- footer.css   #尾部样式
+   |-- js    #页面功能文件
+   |  |--register.js   #注册页面文件
+   |  |-- canvas.js   #注册页面的画布验证码
+   |  |-- login.js   #登录页面js文件
+   |  |-- cookie.js    #封装的cookie方法
+   |  |-- index.js    #首页轮播图,回到顶部等功能js文件
+   |  |-- move.js   #轮播图运动函数的封装文件
+   |  |--readyData.js   #首页数据渲染文件
+   |  |-- shop.js      #商店页面功能文件
+   |  |-- details.js     #详情页放大镜等功能js文件
+   |  |--detailReay.js     #详情页数据渲染等js文件
+   |  |--webCart.js    #购物车功能文件
+   |  |--myApi.js  #封装的一些api方法
+   |  |--promiseAjax.js  #promise版的ajax文件
+   |-- PHP   #后端接口文件
+   |-- data  #页面请求的数据文件
+   |--header.HTML  #头部结构文件 公共文件
+   |--footer.HTML   #尾部结构文件 公共文件
+   |--details.HTML  #详情页
+   |-- index.HTML  #首页
+   |--login.HTML    #登录页
+   |--register.HTML  #注册页面
+   |--shop.HTML  #商店页面
+   |--webCart.HTML #购物车页面
+
+## 启动项目
+**需要开启Apache和mysql服务**
+
+## 说明
+
+```txt
+一个简易的电商网站,仿照良仓网站样式,主要利用JavaScript+jquery+ajax实现,后端接口使用PHP,大部分数据都是利用ajax请求json数据完成,主要目的检验自己JavaScript的掌握情况
+```
