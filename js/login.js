@@ -90,7 +90,7 @@ Login.prototype = {
       case 1: {
         if (Number(that.userYzm.value) == that.randNum) {
          location.href = 'http://localhost:8080/liangcSys/index.html'
-         that.setCookie('login', that.data, 30000)
+         that.setCookie('login', that.data, 10000)
         } else if (!(Number(that.userYzm.value) )== that.randNum && that.userYzm.value != "")
         {
           alert("验证码错误")

@@ -16,6 +16,25 @@ window.onload = function () {
         loginN.style.display = "block";
         loginN.innerHTML ="欢迎 用户 "+decodeURI(login);
     }
+    function goTop() {
+        clearInterval(timer);
+        var speed = 200;
+        var timer = setInterval(function () {
+            //获取滚动条的高度
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            //设置滚动条的高度
+            document.documentElement.scrollTop = document.body.scrollTop = (scrollTop - speed);
+            speed += 150
+            if (document.documentElement.scrollTop <= 0) {
+                clearInterval(timer);
+            }
+        }, 30)
+    }
+    let btn = document.querySelector("#btnTop")
+    btn.onclick = function () {
+        goTop();
+    }
+
 }
 
 class Banner {

@@ -106,3 +106,17 @@
   margin: 0 10px;
   cursor: pointer;
 }
+#btnTop{
+   width: 86px;
+    height: 86px;
+    background-color: #292D33;
+    outline: none;
+    font-size: 40px;
+    color: white;
+    border: none;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    line-height: 86px;
+    font-weight: 500;
+}

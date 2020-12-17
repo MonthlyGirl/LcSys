@@ -13,7 +13,7 @@ let count = 1;
 
 promiseAjax({
   method: 'post',
-  url:'http://localhost:8080/liangcSys/data/goodsList.json',
+  url: 'http://localhost:8080/liangcSys/data/goodsList.json',
   data: {}
 })
   .then((data) => {
@@ -69,7 +69,7 @@ promiseAjax({
     first.onclick = function (e) {
       e.preventDefault()
       if (count <= 1) {
-        count=1
+        count = 1
       } else {
         count--
       }
@@ -93,10 +93,31 @@ promiseAjax({
     function clearName() {
       for (var k = 0; k < aBtn.length; k++) { aBtn[k].className = ''; }
     }
-    })
+  })
+
+
+window.onload = function () {
+  //回到顶部
+  function goTop() {
+    clearInterval(timer);
+    var speed = 200;
+    var timer = setInterval(function () {
+      //获取滚动条的高度
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      //设置滚动条的高度
+      document.documentElement.scrollTop = document.body.scrollTop = (scrollTop - speed);
+      speed += 150
+      if (document.documentElement.scrollTop <= 0) {
+        clearInterval(timer);
+      }
+    }, 30)
+  }
+  let btn = document.querySelector("#btnTop")
+  btn.onclick = function () {
+    goTop();
+  }
 
 
 
-
-
+}
 

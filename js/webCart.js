@@ -4,20 +4,6 @@ $.getScript('./js/header.js')
 //导入footer
 $('#footerBox').load('./footer.html');
 
-// window.onload = function () {
-//   let loginLi = document.querySelector(".loginLi div")
-//   let loginN = document.querySelector(".loginN")
-//   let login = getCookie('login');
-//   if (!login) {
-//     location.href = './login.html';
-//   } else {
-//     loginLi.style.display = "none";
-//     loginN.style.display = "block";
-//     loginN.innerHTML = "欢迎 用户 " + decodeURI(login);
-//   }
-// }
-
-
 
 class webCart {
   constructor() {
@@ -57,7 +43,7 @@ class webCart {
            <input type="hidden" class="data" data-id="${data[i].id}">
            </input>
             <input type="hidden" class="dataId" value="">
-          <input type="checkbox" class="chkbox itemBtn" name="itemCheck">
+          <input type="checkbox" class="chkbox itemBtn" name="itemCheck"value="${data[i].id}">
           <a href="" class="gimgCon">
               <img src="${data[i].imgIcon}" />
             </a>
@@ -105,6 +91,7 @@ window.onload = function () {
       this.carTab = document.querySelector(".carTab");
       this.data = document.querySelector(".data");
       this.id = this.data.dataset.id //获取id;
+      console.log(this.data);
       this.init();
     }
     init() {
@@ -112,13 +99,10 @@ window.onload = function () {
       console.log(this.data);
     }
     eventProxy(e) {
-      // let that=this
       e = e || window.event;
       let target = e.target || e.srcElement;
       if (target.tagName == 'BUTTON' && target.className == "blue del") {
-        // console.log(113);
         let id = target.parentNode.parentNode.children[0].children[0].getAttribute("data-id");
-
         this.ajax(id);
        
       }
@@ -127,7 +111,7 @@ window.onload = function () {
       let that = this
       promiseAjax({
         method: 'post',
-        url: "http://localhost:8080/liangcSys/php/webCartDel.php",
+        url: "http://localhost:8080/liangcSys/php/webCartDel.php"+"?now=" + new Date().getTime(),
         data: {
           id: id
         }
@@ -166,12 +150,9 @@ window.onload = function () {
       this.init();
     }
     init() {
-      // this.eventProxy()
-      // console.log(this.inputVal.value);
       this.eventBind()
     }
     eventProxy(e) {
-      // let that=this
       e = e || window.event;
       let target = e.target || e.srcElement;
 
@@ -219,9 +200,9 @@ window.onload = function () {
     }
     run(data) {
       data = JSON.parse(data)
-      // switch (data.state) {
-      //   case 1: new webCart();
-      // }
+      switch (data.state) {
+        case 1: new webCart();
+      }
     }
     eventBind() {
       this.carTab.addEventListener('click', this.eventProxy.bind(this))
@@ -236,11 +217,26 @@ window.onload = function () {
       this.carTab = document.querySelector(".carTab");
       this.priceNo = document.querySelector(".priceNo");
       this.checkoutBtn = document.querySelector(".checkoutBtn");
-      this.getId = document.querySelector(".dataId")
+      this.getId = document.querySelector(".dataId");
+      this.str = "";
+      this.shoppingCarList = document.querySelector("#shoppingcarList")
+      this.cartMei = document.querySelector("#cartmei")
       this.init()
     }
     init() {
       this.eventBind()
+    }
+    eventProxy(e) {
+      // let that=this
+      e = e || window.event;
+      let target = e.target || e.srcElement;
+      if (target.tagName == 'INPUT' && target.className == "chkbox itemBtn") {
+        this.isAllCheck() && this.changeItemStatus(true);
+        this.getSumPrice();
+        let id = target.parentNode.parentNode.children[0].children[0].getAttribute("data-id");
+        this.getId.value = id
+        // console.log(this.getId.value);
+      }
     }
     allCheck() {
       for (let i = 0; i < this.items.length; i++) {
@@ -260,8 +256,14 @@ window.onload = function () {
           this.allCheckBtn.checked = false
           return false
           break;
+        } else if (this.items[i].checked ===true){
+          this.str += 'id=' + this.items[i].value + "&";
         }
+       
+       
       }
+      // this.str = this.str.substring(0, this.str.length - 1);
+      // console.log(this.str);
       return true;
     }
     getSumPrice() {
@@ -277,27 +279,20 @@ window.onload = function () {
       }
       this.priceNo.innerHTML = "¥" + sum;
     }
-    eventProxy(e) {
-      // let that=this
-      e = e || window.event;
-      let target = e.target || e.srcElement;
-      if (target.tagName == 'INPUT' && target.className == "chkbox itemBtn") {
-        this.isAllCheck() && this.changeItemStatus(true);
-        this.getSumPrice();
-        let id = target.parentNode.parentNode.children[0].children[0].getAttribute("data-id");
-        this.getId.value=id
-      }
-    }
+   
     ajax(id) {
       promiseAjax({
         method: 'post',
-        url: "http://localhost:8080/liangcSys/php/webCartDel.php",
+        url: "http://localhost:8080/liangcSys/php/webCartDel.php" + "?now=" + new Date().getTime(),
         data: {
           id: id
         }
       })
         .then((data) => {
+          console.log(data);
+          debugger
           data = JSON.parse(data)
+          debugger
           switch (data.state) {
             case 1: new webCart()
           }
@@ -306,16 +301,23 @@ window.onload = function () {
         console.error(data);
       })
     }
-    play(id) {
-      let getId=id
+    play() {
+      // let getId=id
+      let that =this
       let val = this.priceNo.innerHTML
       if (val ==" ¥0.00") {
-        return
+        this.checkoutBtn.disabled = true
       } else if (val != "¥0.00") {
+        this.checkoutBtn.disabled = false
         var t = confirm("确认支付?")
         if (t == true) {
           alert("您已成功支付" + this.priceNo.innerHTML + "元")
-          this.ajax(this.getId.value)
+          that.ajax(this.getId.value)
+          if (this.allCheckBtn.checked) {
+            this.shoppingCarList.style.display = "none";
+            this.cartMei.style.display = "block";
+            this.priceNo.innerHTML ="¥0.00元"
+          }
         }
       
       }
@@ -329,12 +331,4 @@ window.onload = function () {
   }
 
   new SumPrice()
-
-  class PlayDel{
-    constructor() {
-    
-  }
-}
-
-
 }

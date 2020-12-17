@@ -158,7 +158,7 @@ class DetailsGoodInfo {
                 height="15px"></a>
           </div>
           <div class="infoItem buyAll" style="padding-bottom:0px;">
-            <a href="#" class="buy2" id="buyNow">立即购买</a>
+            <a href="http://localhost:8080/liangcSys/webCart.html" class="buy2" id="buyNow">立即购买</a>
             <p style="display:none" id="goodsBuyOver">已售罄，即将到货</p>
           </div>
         </div>
