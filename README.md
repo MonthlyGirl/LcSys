@@ -1,5 +1,7 @@
 ## 目录
 
+
+```txt
    |-- css   #样式文件
    |  |-- index.css   #首页样式
    |  |-- shop.css    #商店样式
@@ -17,12 +19,22 @@
    |  |--readyData.js   #首页数据渲染文件
    |  |-- shop.js      #商店页面功能文件
    |  |-- details.js     #详情页放大镜等功能js文件
-   |  |--detailReay.js     #详情页数据渲染等js文件
+   |  |--detailReady.js     #详情页数据渲染等js文件
    |  |--webCart.js    #购物车功能文件
    |  |--myApi.js  #封装的一些api方法
    |  |--promiseAjax.js  #promise版的ajax文件
    |-- PHP   #后端接口文件
+   |  |-- public.php  #连接数据库的公共接口
+   |  |-- login.php  #登录接口
+   |  |-- register.php  #注册接口
+   |  |-- details.php  #详情页接口
+   |  |-- webCart.php   #渲染购物车接口
+   |  |-- webCartDel.php   #购物删除商品
+   |  |-- webCartUp.php    #购物车更新商品数量
    |-- data  #页面请求的数据文件
+   |  |--indexGood.json    #首页商品数据
+   |  |-- goodList.json    #商店列表页商品数据
+   |  |--details.json  #详情页商品数据
    |--header.HTML  #头部结构文件 公共文件
    |--footer.HTML   #尾部结构文件 公共文件
    |--details.HTML  #详情页
@@ -31,6 +43,9 @@
    |--register.HTML  #注册页面
    |--shop.HTML  #商店页面
    |--webCart.HTML #购物车页面
+   
+```
+
 
 ## 启动项目
 **需要开启Apache和mysql服务**
