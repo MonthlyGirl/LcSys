@@ -54,5 +54,6 @@
 ## 说明
 
 ```txt
-一个简易的电商网站,仿照良仓网站样式,主要利用JavaScript+jquery+ajax实现,后端接口使用PHP,大部分数据都是利用ajax请求json数据完成,主要目的检验自己JavaScript的掌握情况
+一个简易的电商网站,仿照良仓网站样式,主要利用JavaScript+jquery+ajax实现,
+后端接口使用PHP,大部分数据都是利用ajax请求json数据完成,主要目的检验自己JavaScript的掌握情况
 ```
